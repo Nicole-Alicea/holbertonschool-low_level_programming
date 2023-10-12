@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc int puts(Programming is like building a multilingual puzzle*str)
+gcc -Wall int puts(Programming is like building a multilingual puzzle*str)
