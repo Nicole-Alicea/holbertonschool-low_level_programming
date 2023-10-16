@@ -9,8 +9,6 @@
 int main(void)
 {
 	int n;
-	char x[] = "Last digit of";
-	char y[] = "is";
 
 	srand(time(0));
 	n = rand();
