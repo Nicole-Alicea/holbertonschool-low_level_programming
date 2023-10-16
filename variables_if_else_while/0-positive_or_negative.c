@@ -12,13 +12,11 @@
 int main(void)
 {
 int n;
-char s;
 
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-for( n = 0 ; n < 0 ; n++ ) 
-{
-printf("%d\n", rand () %s );
-}
+
+printf("%d\n", n);
+
 return (0);
 }
