@@ -9,11 +9,12 @@
 int main(void)
 {
 	int n;
+	int lastDigit;
 
 	srand(time(0));
 	n = rand();
 
-	int lastDigit = n % 10;
+	lastDigit = n % 10;
 
 	printf("The string Last digit of %d is ", n);
 
