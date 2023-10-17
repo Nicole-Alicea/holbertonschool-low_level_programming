@@ -15,11 +15,11 @@ int main(void)
 		char letter = 'a' + i;
 
 		if (letter != 'q' && letter != 'e')
-				{
-				putchar(letter);
-				}
-				}
-				putchar('\n');
+		{
+			putchar(letter);
+		}
+	}
+	putchar('\n');
 
-				return (0);
-				}
+	return (0);
+}
