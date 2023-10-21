@@ -28,6 +28,6 @@ int main(void)
 		{
 			printf("%d", num);
 		}
-		return (0);
 	}
+	return (0);
 }
