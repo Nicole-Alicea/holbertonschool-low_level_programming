@@ -14,19 +14,19 @@ int main(void)
 	{
 		if (num % 3 == 0 && num % 5 == 0)
 		{
-			printf("FizzBuzz");
+			printf("FizzBuzz ");
 		}
 		if (num % 3 == 0)
 		{
-			printf("Fizz");
+			printf("Fizz ");
 		}
 		if (num % 5 == 0)
 		{
-			printf("Buzz");
+			printf("Buzz ");
 		}
 		else
 		{
-			printf("%d", num);
+			printf("%d ", num);
 		}
 	}
 	return (0);
