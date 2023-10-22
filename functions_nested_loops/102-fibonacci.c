@@ -10,11 +10,11 @@ int main(void)
 {
 	int n = 50;
 	int fib_sequence[50];
+	int i;
 
 	fib_sequence[0] = 1;
 	fib_sequence[1] = 2;
 
-	int i;
 	for (i = 2; i < n; i++)
 	{
 		fib_sequence[i] = fib_sequence[i - 1] + fib_sequence[i - 2];
