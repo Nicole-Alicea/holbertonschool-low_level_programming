@@ -9,14 +9,14 @@
 int main(void)
 {
 	int a = 1, b = 2;
+	int count = 2;
+	int temp;
 
 	printf("%d, %d, ", a, b);
 
-	int count = 2;
-
 	while (count < 98)
 	{
-		int temp = a + b;
+		temp = a + b;
 		a = b;
 		b = temp;
 
