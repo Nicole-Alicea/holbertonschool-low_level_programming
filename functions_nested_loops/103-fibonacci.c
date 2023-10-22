@@ -22,7 +22,7 @@ int main(void)
 		b = next_term;
 	}
 
-	printf("Sum of even-valued Fibonacci terms not exceeding %ld: %ld\n", limit, sum);
+	printf("%ld: %ld\n", limit, sum);
 
 	return (0);
 }
