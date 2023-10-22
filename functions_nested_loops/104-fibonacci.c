@@ -8,11 +8,11 @@
 
 int main(void)
 {
-	unsigned long long a = 1, b = 2;
+	unsigned int a = 1, b = 2;
 	int count = 2;
-	unsigned long long temp;
+	unsigned int temp;
 
-	printf("%llu, %llu, ", a, b);
+	printf("%u, %u, ", a, b);
 
 	while (count < 98)
 	{
@@ -20,7 +20,7 @@ int main(void)
 		a = b;
 		b = temp;
 
-		printf("%llu, ", b);
+		printf("%u, ", b);
 
 		count++;
 	}
