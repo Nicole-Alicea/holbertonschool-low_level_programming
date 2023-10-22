@@ -16,7 +16,7 @@ int main(void)
 		{
 			putchar(n + '0');
 			putchar(m + '0');
-			
+
 			if (n != 8 || m != 9)
 			{
 				putchar(',');
@@ -26,5 +26,5 @@ int main(void)
 	}
 	putchar('\n');
 
-	return(0);
+	return (0);
 }
