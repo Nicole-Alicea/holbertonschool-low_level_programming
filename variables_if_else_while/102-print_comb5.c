@@ -8,30 +8,28 @@
 
 int main(void)
 {
-	int n, m, p, q;
+	int n;
 
-	for (n = 0; n <= 9; n++)
+	while (n < 100)
 	{
-		for (m = 0; m <= 9; m++)
-		{
-			for (p = 0; p <= 9; p++)
-			{
-				for (q = p + 1; q <= 9; q++)
-				{
-					putchar(n + '0');
-					putchar(p + '0');
-					putchar(' ');
-					putchar(m + '0');
-					putchar(q + '0');
+		int m = n + 1;
 
-					if (n != 8 || m != 9 || p != 8 || q != 9)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+		while (m < 100)
+		{
+			putchar(n / 10 + '0');
+			putchar(n % 10 + '0');
+			putchar(' ');
+			putchar(m / 10 + '0');
+			putchar(m % 10 + '0');
+			
+			if (n != 98)
+			{
+				putchar(',');
+				putchar(' ');
 			}
+			m++;
 		}
+		n++;
 	}
 	putchar('\n');
 	return (0);
