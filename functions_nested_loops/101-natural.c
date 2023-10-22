@@ -9,8 +9,9 @@
 int main(void)
 {
 	int sum_of_multiples = 0;
+	int num;
 
-	for (int num = 3; num < 1024; num++)
+	for (num = 3; num < 1024; num++)
 	{
 		if (num % 3 == 0 || num % 5 == 0)
 		{
