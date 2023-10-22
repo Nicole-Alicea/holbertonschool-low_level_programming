@@ -14,12 +14,13 @@ int main(void)
 	fib_sequence[0] = 1;
 	fib_sequence[1] = 2;
 
-	for (int i = 2; i < n; i++)
+	int i;
+	for (i = 2; i < n; i++)
 	{
 		fib_sequence[i] = fib_sequence[i - 1] + fib_sequence[i - 2];
 	}
 
-	for (int i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		printf("%d", fib_sequence[i]);
 		if (i < n - 1)
