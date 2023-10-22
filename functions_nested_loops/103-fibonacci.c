@@ -22,7 +22,7 @@ int main(void)
 		b = next_term;
 	}
 
-	printf("%ld: %ld\n", limit, sum);
+	printf("%ld\n", limit, sum);
 
 	return (0);
 }
