@@ -8,8 +8,8 @@
 
 int main(void)
 {
-	long long limit = 4000000;
-	long long a = 1, b = 2, next_term, sum = 0;
+	long limit = 4000000;
+	long a = 1, b = 2, next_term, sum = 0;
 
 	while (b <= limit)
 	{
@@ -22,7 +22,7 @@ int main(void)
 		b = next_term;
 	}
 
-	printf("Sum of even-valued Fibonacci terms not exceeding %lld: %lld\n", limit, sum);
+	printf("Sum of even-valued Fibonacci terms not exceeding %ld: %ld\n", limit, sum);
 
 	return (0);
 }
