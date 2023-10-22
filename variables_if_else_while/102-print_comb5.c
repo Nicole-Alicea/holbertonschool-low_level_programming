@@ -12,7 +12,7 @@ int main(void)
 
 	for (n = 0; n <= 9; n++)
 	{
-		for (m = n + 1; m <= 9; m++)
+		for (m = 0; m <= 9; m++)
 		{
 			for (p = 0; p <= 9; p++)
 			{
