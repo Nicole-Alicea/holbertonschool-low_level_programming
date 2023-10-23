@@ -10,12 +10,12 @@
 int main(void)
 {
 	mpz_t a, b, temp;
+	int count = 2;
+
 	mpz_inits(a, b, temp, NULL);
 
 	mpz_set_ui(a, 1);
 	mpz_set_ui(b, 2);
-
-	int count = 2;
 
 	gmp_printf("%Zd, %Zd, ", a, b);
 
