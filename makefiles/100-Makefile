@@ -16,6 +16,8 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
+CC_RULE = $(CC) $(CFLAGS)
+
 clean:
 	$(RM) $(OBJ) $(NAME) *~ \#*\#
 
