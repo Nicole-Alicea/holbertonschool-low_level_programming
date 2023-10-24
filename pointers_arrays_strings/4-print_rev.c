@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * print_rev - This function will print a string, in reverse, followed by a new line
+ * print_rev - This function will print a string in reverse
  * @s: string that will be printed in reverse
  *
  * Return: void
@@ -13,7 +13,7 @@ void print_rev(char *s)
 {
 	int length = strlen(s);
 	int i;
-	
+
 	for (i = length - 1; i >= 0; i--)
 	{
 		putchar(s[i]);
