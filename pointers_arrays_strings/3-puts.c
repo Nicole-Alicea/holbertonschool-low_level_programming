@@ -8,6 +8,8 @@
 
 void _puts(char *str)
 {
+	char *str;
+
 	_puts(*str);
 	_puts('\n');
 }
