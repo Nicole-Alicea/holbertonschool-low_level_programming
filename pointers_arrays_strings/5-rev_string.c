@@ -3,6 +3,7 @@
 
 /**
  * rev_string - This function reverses a string.
+ * @s: String to be reversed
  *
  * Return: void
  */
