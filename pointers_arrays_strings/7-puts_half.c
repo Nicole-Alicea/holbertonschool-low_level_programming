@@ -4,6 +4,7 @@
 
 /**
  * puts_half - Function that prints half of a string
+ * @str: string that will be used
  *
  * Return: void
  */
@@ -14,7 +15,7 @@ void puts_half(char *str)
 	int start_index;
 	int i;
 
-	if(length % 2 == 0)
+	if (length % 2 == 0)
 	{
 		start_index = length / 2;
 	}
