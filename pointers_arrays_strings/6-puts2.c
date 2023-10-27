@@ -10,12 +10,17 @@
 
 void puts2(char *str)
 {
-	int str;
-	int len = strlen(str);
+	int g;
+	int c;
+	char *s = str;
 
-	for (str = 0; str < len; str += 2)
+	for (c = 0; *str != '\0'; c++)
 	{
-		puts2(str);
+		str++;
+	}
+	for (g = 0; g < c; g = g + 2)
+	{
+		putchar(s[g]);
 	}
 	putchar('\n');
 }
