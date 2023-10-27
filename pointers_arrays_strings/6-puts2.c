@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * puts2 - Prints every other character of a string starting with the first
@@ -9,7 +10,7 @@
 
 void puts2(char *str)
 {
-	char str;
+	int str;
 	int len = strlen(str);
 
 	for (str = 0; str < len; str += 2)
