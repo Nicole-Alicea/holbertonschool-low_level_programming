@@ -12,42 +12,23 @@
 int _atoi(char *s)
 {
 	int result = 0;
-	int sign = 1;
-	bool foundDigit = false;
-	int digit = *s - '0';
+	int sign = 1; /* 1 represents positive, -1 represents negative */
 
 	while (*s)
 	{
-		if (*s == ' ')
-		{
-			s++;
-			continue;
-		}
 		if (*s == '-')
 		{
-			sign = -1;
-			s++;
+			sign *= -1;
 		}
-		else if (*s == '+')
+		else if (*s >= '0' && *s <= '9')
 		{
-			s++;
+			result = result * 10 + (*s - '0');
 		}
-		while (*s >= '0' && *s <= '9')
-		{
-			foundDigit = true;
-
-			if (result > (INT_MAX - digit) / 10)
-			{
-				return (sign == 1 ? INT_MAX : INT_MIN);
-			}
-			result = result * 10 + digit;
-			s++;
-		}
-		if (!foundDigit)
+		else if (result != 0)
 		{
 			break;
 		}
-		return (result * sign);
+		s++;
 	}
-	return (0);
+	return (result * sign);
 }
