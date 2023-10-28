@@ -2,6 +2,8 @@
 
 /**
  * *_strcpy - Copies the string pointed to by src
+ * @dest: destination
+ * @src: source
  *
  * Return: Always 0 (Success)
  */
@@ -17,5 +19,5 @@ char *_strcpy(char *dest, char *src)
 		src++;
 	}
 	*dest = '\0';
-	return original_dest;
+	return (original_dest);
 }
