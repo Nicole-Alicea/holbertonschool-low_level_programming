@@ -20,6 +20,7 @@ char *leet(char *str)
 	}
 
 	strcpy(encodedStr, str);
+	int i;
 
 	for (i = 0; encodedStr[i] != '\0'; i++)
 	{
