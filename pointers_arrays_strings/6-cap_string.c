@@ -9,6 +9,21 @@
  * Return: input
  */
 
+bool is_separator(char c)
+{
+	char separators[] = " \t\n,;.!?\"(){}";
+	int i;
+
+	for (i = 0; separators[i]; i++)
+	{
+		if (c == separators[i])
+		{
+			return (true);
+		}
+	}
+	return (false);
+}
+
 char *cap_string(char *input)
 {
 	bool capitalize = true;
