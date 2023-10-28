@@ -4,6 +4,7 @@
 
 /**
  * _atoi - Converts a string to an integer
+ * @s: pointer
  *
  * Return: Always 0 (Success)
  */
@@ -37,7 +38,7 @@ int _atoi(char *s)
 
 			if (result > (INT_MAX - digit) / 10)
 			{
-				return sign == 1 ? INT_MAX : INT_MIN;
+				return (sign == 1 ? INT_MAX : INT_MIN);
 			}
 			result = result * 10 + digit;
 			s++;
@@ -46,7 +47,7 @@ int _atoi(char *s)
 		{
 			return (0);
 		}
-		return result * sign;
+		return (result * sign);
 	}
 	return (0);
 }
