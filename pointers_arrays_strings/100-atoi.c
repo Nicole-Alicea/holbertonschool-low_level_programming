@@ -13,6 +13,7 @@ int _atoi(char *s)
 	int result = 0;
 	int sign = 1;
 	bool foundDigit = false;
+	int digit = *s - '0';
 
 	while (*s)
 	{
@@ -33,7 +34,6 @@ int _atoi(char *s)
 		while (*s >= '0' && *s <= '9')
 		{
 			foundDigit = true;
-			int digit = *s - '0';
 
 			if (result > (INT_MAX - digit) / 10)
 			{
