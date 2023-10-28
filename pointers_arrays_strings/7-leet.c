@@ -36,7 +36,7 @@ char *leet(char *str)
 		{
 			encodedStr[i] = 'O';
 		}
-		else if (c == 't' || == 'T')
+		else if (c == 't' || c == 'T')
 		{
 			encodedStr[i] = '7';
 		}
