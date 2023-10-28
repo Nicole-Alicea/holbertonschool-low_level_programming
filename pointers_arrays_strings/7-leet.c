@@ -21,31 +21,18 @@ char *leet(char *str)
 		return (NULL);
 	}
 
-	strcpy(encodedStr, str);
-
-	for (i = 0; encodedStr[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		char c = encodedStr[i];
-		if ((c == 'a' || c == 'A'))
+		char c = str[i];
+		if ((c == 'a' || c == 'A') || (c == 'e' || c == 'E') || (c == 'o' || c == 'O') || (c == 't' || c == 'T') || (c == 'l' || c == 'L'))
 		{
-			encodedStr[i] = '4';
+			encodedStr[i] = '4' * (c == 'a' || c == 'A') + '3' * (c == 'e' || c == 'E') + 'O' * (c == 'o' || c == 'O') + '7' * (c == 't' || c == 'T') + '1' * (c == 'l' || c == 'L');
 		}
-		else if (c == 'e' || c == 'E')
+		else
 		{
-			encodedStr[i] = '3';
-		}
-		else if (c == 'o' || c == 'O')
-		{
-			encodedStr[i] = 'O';
-		}
-		else if (c == 't' || c == 'T')
-		{
-			encodedStr[i] = '7';
-		}
-		else if (c == 'l' || c == 'L')
-		{
-			encodedStr[i] = '1';
+			encodedStr[i] = c;
 		}
 	}
+	encodedStr[i] = '\0';
 	return (encodedStr);
 }
