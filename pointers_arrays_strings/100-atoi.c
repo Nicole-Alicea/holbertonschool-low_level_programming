@@ -45,7 +45,7 @@ int _atoi(char *s)
 		}
 		if (!foundDigit)
 		{
-			return (0);
+			break;
 		}
 		return (result * sign);
 	}
