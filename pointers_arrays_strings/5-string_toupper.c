@@ -11,11 +11,12 @@
 
 char *string_toupper(char *str)
 {
+	char *original = str;
+
 	if (str == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
-	char *original = str;
 
 	while (*str != '\0')
 	{
