@@ -9,18 +9,19 @@
 
 char *leet(char *str)
 {
+	char *encodedStr = (char *)malloc(strlen(str) + 1);
+	int i;
+
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	char *encodedStr = (char *)malloc(strlen(str) + 1);
 	if (encodedStr == NULL)
 	{
 		return (NULL);
 	}
 
 	strcpy(encodedStr, str);
-	int i;
 
 	for (i = 0; encodedStr[i] != '\0'; i++)
 	{
