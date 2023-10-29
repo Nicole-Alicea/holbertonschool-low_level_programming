@@ -3,9 +3,11 @@
 #include <string.h>
 
 /**
+ * _strchr - This function locates a character in a string
+ * @c: character to be located
+ * @s: string to be analyzed
  *
- *
- *
+ * Return: pointer to the first occurence of c or NULL if not found
  */
 
 char *_strchr(char *s, char c)
