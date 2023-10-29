@@ -9,42 +9,21 @@
  * Return: input
  */
 
-bool is_separator(char c)
-{
-	char separators[] = " \t\n,;.!?\"(){}";
-	int i;
-
-	for (i = 0; separators[i]; i++)
-	{
-		if (c == separators[i])
-		{
-			return (true);
-		}
-	}
-	return (false);
-}
-
 char *cap_string(char *input)
 {
-	bool capitalize = true;
-	int length = strlen(input);
-	int i;
+	char ptr = input;
 
-	for (i = 0; i < length; i++)
+	if (ptr >= 'a' && *ptr <= 'z')
+		ptr = (ptr & ~32);
+
+	while (ptr)
 	{
-		if (is_separator(input[i]))
+		if (ptr == ''; *ptr == '\t'; *ptr == '\n'; *ptr == ','; *ptr == ';'; *ptr == '.';
+				*ptr == '!'; *ptr == '?'; *ptr == ""; *ptr == '('; *ptr == ')'; *ptr == '{'; *ptr == '}')
 		{
-			capitalize = true;
+			if ((ptr + 1) && (*(ptr +1) >= 'a' && *(ptr + 1) <= 'z')) (ptr + 1) = ((ptr + 1) & ~32);
 		}
-		else if (capitalize && isalpha(input[i]))
-		{
-			input[i] = toupper(input[i]);
-			capitalize = false;
-		}
-		else
-		{
-			input[i] = tolower(input[i]);
-		}
+		ptr++;
 	}
 	return (input);
 }
