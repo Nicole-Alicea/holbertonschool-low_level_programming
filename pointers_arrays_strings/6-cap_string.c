@@ -16,8 +16,8 @@ char *cap_string(char *str)
 
 	while (*ptr)
 	{
-		if (*ptr == ' ' || *ptr == '\t' || *ptr == '\n' || *ptr == ',' || 
-				*ptr == ';' || *ptr == '.' || *ptr == '!' || *ptr == '?' || 
+		if (*ptr == ' ' || *ptr == '\t' || *ptr == '\n' || *ptr == ',' ||
+				*ptr == ';' || *ptr == '.' || *ptr == '!' || *ptr == '?' ||
 				*ptr == '"' || *ptr == '(' || *ptr == ')' || *ptr == '{' || *ptr == '}')
 		{
 			if (*(ptr + 1) && *(ptr + 1) >= 'a' && *(ptr + 1) <= 'z')
