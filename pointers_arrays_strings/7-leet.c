@@ -9,10 +9,10 @@ char *leet(char *str)
 {
 	char *ptr = str;
 	char *letters = "aeotlAEOTL";
-	char leetMap = "430711";
+	char leetMap[] = "430711";
 	int i;
 
-	while (ptr)
+	while (*ptr)
 	{
 		for (i = 0; letters[i]; i++)
 		{
