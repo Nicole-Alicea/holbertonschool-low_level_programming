@@ -9,9 +9,9 @@
  * Return: input
  */
 
-char *cap_string(char *input)
+char *cap_string(char *str)
 {
-	char ptr = input;
+	char ptr = str;
 
 	if (ptr >= 'a' && *ptr <= 'z')
 		ptr = (ptr & ~32);
@@ -25,5 +25,5 @@ char *cap_string(char *input)
 		}
 		ptr++;
 	}
-	return (input);
+	return (str);
 }
