@@ -2,6 +2,7 @@
 
 /**
  * cap_string - This function capitalizes all words of a string
+ * @str: string that will be returned
  *
  * Return: input
  */
@@ -15,10 +16,11 @@ char *cap_string(char *str)
 
 	while (*ptr)
 	{
-		if (*ptr == ' ' || *ptr == '\t' || *ptr == '\n' || *ptr == ',' || *ptr == ';' || *ptr == '.' ||
-				*ptr == '!' || *ptr == '?' || *ptr == '"' || *ptr == '(' || *ptr == ')' || *ptr == '{' || *ptr == '}')
+		if (*ptr == ' ' || *ptr == '\t' || *ptr == '\n' || *ptr == ',' || 
+				*ptr == ';' || *ptr == '.' || *ptr == '!' || *ptr == '?' || 
+				*ptr == '"' || *ptr == '(' || *ptr == ')' || *ptr == '{' || *ptr == '}')
 		{
-			if (*(ptr + 1) && *(ptr +1) >= 'a' && *(ptr + 1) <= 'z')
+			if (*(ptr + 1) && *(ptr + 1) >= 'a' && *(ptr + 1) <= 'z')
 				*(ptr + 1) = (*(ptr + 1) - 32);
 		}
 		ptr++;
