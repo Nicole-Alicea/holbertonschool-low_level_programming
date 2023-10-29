@@ -2,6 +2,8 @@
 
 /**
  * _strspn - This function gets the length of a prefix substring
+ * @s: initial segment
+ * @accept: The bytes from here are what s consists of
  *
  * Return: number of bytes in initial segment of s
  */
