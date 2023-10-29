@@ -3,8 +3,9 @@
 
 /**
  * print_chessboard - This function prints the chessboard
- * @row: rows of the chessboard
- * @col: collumns of the chessboard
+ * @row: row
+ * @col: collumn
+ * @a: pointer
  *
  * Return: void
  */
