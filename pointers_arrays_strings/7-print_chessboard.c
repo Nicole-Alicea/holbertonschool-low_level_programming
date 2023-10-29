@@ -3,8 +3,6 @@
 
 /**
  * print_chessboard - This function prints the chessboard
- * @row: row
- * @col: collumn
  * @a: pointer
  *
  * Return: void
