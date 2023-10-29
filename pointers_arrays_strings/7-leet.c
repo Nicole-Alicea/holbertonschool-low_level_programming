@@ -9,30 +9,22 @@
 
 char *leet(char *str)
 {
-	char *encodedStr = (char *)malloc(strlen(str) + 1);
+	char *ptr = str;
+	char *letters = "aeotlAEOTL";
+	char leetMap = "430711";
 	int i;
 
-	if (str == NULL)
+	while (ptr)
 	{
-		return (NULL);
-	}
-	if (encodedStr == NULL)
-	{
-		return (NULL);
-	}
-
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		char c = str[i];
-		if ((c == 'a' || c == 'A') || (c == 'e' || c == 'E') || (c == 'o' || c == 'O') || (c == 't' || c == 'T') || (c == 'l' || c == 'L'))
+		for (i = 0; letters[i]; i++)
 		{
-			encodedStr[i] = '4' * (c == 'a' || c == 'A') + '3' * (c == 'e' || c == 'E') + 'O' * (c == 'o' || c == 'O') + '7' * (c == 't' || c == 'T') + '1' * (c == 'l' || c == 'L');
+			if (*ptr == letters[i] || *ptr == letters[i] - ('a' - 'A'))
+			{
+				*ptr = leetMap[i];
+				break;
+			}
 		}
-		else
-		{
-			encodedStr[i] = c;
-		}
+		ptr++;
 	}
-	encodedStr[i] = '\0';
-	return (encodedStr);
+	return (str);
 }
