@@ -2,8 +2,12 @@
 #include <stddef.h>
 
 /**
+ * _strstr - This function locates a substring
+ * @needle: substring
+ * @haystack: string
  *
- *
+ * Return: pointer to the beginning of the located substring,
+ * NULL if the substring is not found
  */
 
 char *_strstr(char *haystack, char *needle)
