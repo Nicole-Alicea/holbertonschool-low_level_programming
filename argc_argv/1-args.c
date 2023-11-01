@@ -6,9 +6,8 @@
  * Return: Always 0 (Success)
  */
 
-int main(int argc, char *argv[])
+int main(int argc)
 {
-	(void)argv;
 	int num_args;
 
 	num_args = argc - 1;
