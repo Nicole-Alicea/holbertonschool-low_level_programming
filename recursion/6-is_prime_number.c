@@ -2,6 +2,12 @@
 #include <stdio.h>
 
 /**
+ * is_prime_recursive - This function uses recursion to verify
+ * if an integer is a prime number
+ * @i: The current divisor
+ */
+
+/**
  * is_prime_number - This function will tell us if an integer is a prime number
  * @n: input integer
  *
