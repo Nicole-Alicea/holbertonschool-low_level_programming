@@ -11,14 +11,14 @@
 
 int main(int argc, char *argv[])
 {
+	int num1, num2;
+
 	if (argc != 3)
 	{
 		printf("Error\n");
 
 		return (1);
 	}
-	int num1, num2;
-
 	if (sscanf(argv[1], "%d", &num1) != 1 || sscanf(argv[2], "%d", &num2) != 1)
 	{
 		printf("Error: Invalid input. Please provide two valid integers.\n");
