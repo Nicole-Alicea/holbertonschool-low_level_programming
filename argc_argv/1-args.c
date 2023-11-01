@@ -6,13 +6,11 @@
  * Return: Always 0 (Success)
  */
 
-int main(int argc)
+int main(int argc, char *argv[])
 {
-	int num_args;
+	(void) argv;
 
-	num_args = argc - 1;
-
-	printf("%d\n", num_args);
+	printf("%d\n", argc - 1);
 
 	return (0);
 }
