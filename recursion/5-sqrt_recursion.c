@@ -20,6 +20,6 @@ int _sqrt_recursion(int n)
 	else
 	{
 		int result = _sqrt_recursion(n - 1);
-		return (result * result <= n ? result : result - 1;)
+		return (result * result <= n ? result : result - 1);
 	}
 }
