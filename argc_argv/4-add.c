@@ -10,10 +10,10 @@
  * Return: 0 (Success) or 1 if there is an Error
  */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int total, num, len, i;
-	char* arg;
+	char *arg;
 
 	if (argc < 2)
 	{
@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		arg = argv[i];
+		*arg = argv[i];
 		len = 0;
 
 		while (arg[len])
