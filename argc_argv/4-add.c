@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		*arg = argv[i];
+		arg = argv[i];
 		len = 0;
 
 		while (arg[len])
