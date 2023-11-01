@@ -20,7 +20,7 @@ int _pow_recursion(int x, int y)
 	}
 	else
 	{
-		_pow_recursion(x, y);
-		return (_pow_recursion(x, y));
+		int result = _pow_recursion(x, y);
+		return (result);
 	}
 }
