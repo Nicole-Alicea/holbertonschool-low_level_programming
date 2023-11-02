@@ -5,6 +5,7 @@
  * is_prime_recursive - This function uses recursion to verify
  * if an integer is a prime number
  * @i: The current divisor
+ * @n: input integer
  *
  * Return: 1 if the integer is a prime number, otherwise 0
  */
