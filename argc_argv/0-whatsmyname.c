@@ -3,7 +3,7 @@
 /**
  * main - entry point
  * @argv: name of the program
- * @argc: array
+ * @argc: number of command-line arguments
  *
  * Return: Always 0 (Success)
  */
