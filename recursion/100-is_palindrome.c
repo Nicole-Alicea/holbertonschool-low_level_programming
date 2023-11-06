@@ -3,12 +3,10 @@
 #include <ctype.h>
 
 /**
- * is_plaindrome_recursive - Checks if given string is a palindrome
- * @s: string to be checked
- * @left: left portion of the string to be checked
- * @right: right portion of the string to be checked
+ * is_alphanumeric - checks if a character is an alphanumeric character
+ * @c: character to be checked
  *
- * Return: 1 if the string is a palindrome
+ * Return: 1 if it's an alphanumeric character or 0 otherwise
  */
 
 int is_alphanumeric(char c)
@@ -16,10 +14,28 @@ int is_alphanumeric(char c)
 	return (isalnum(c));
 }
 
+/**
+ * is_equal - checks if two characters are equal
+ * @a: character to be compared
+ * @b: character to be compared
+ *
+ * Return: 1 if equal or 0 if they are not
+ */
+
 int is_equal(char a, char b)
 {
 	return (tolower(a) == tolower(b));
 }
+
+/**
+ * is_palindrome_recursive - recursive helper function that checks
+ * if the string is a palindrome
+ * @s: string to be checked
+ * @right: right portion of string
+ * @left: left portion of string
+ *
+ * Return: 0
+ */
 
 int is_palindrome_recursive(char *s, int left, int right)
 {
@@ -43,7 +59,7 @@ int is_palindrome_recursive(char *s, int left, int right)
 }
 
 /**
- * is_palindrome - This function will check wether a string is a palindrome or not
+ * is_palindrome - Checks wether a string is a palindrome
  * @s: string to be checked
  *
  * Return: 1 if string is a palindrome and 0 if not
