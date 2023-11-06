@@ -11,29 +11,35 @@
  * Return: 1 if the string is a palindrome
  */
 
+int is_alphanumeric(char c)
+{
+	return (isalnum(c));
+}
+
+int is_equal(char a, char b)
+{
+	return (tolower(a) == tolower(b));
+}
+
 int is_palindrome_recursive(char *s, int left, int right)
 {
-	while (left < right)
+	if (left >= right)
 	{
-		if (!isalnum(s[left]))
-		{
-			left++;
-		}
-		else if (!isalnum(s[right]))
-		{
-			right--;
-		}
-		else if (tolower(s[left]) != tolower(s[right]))
-		{
-			return (0);
-		}
-		else
-		{
-			left++;
-			right--;
-		}
+		return (1);
 	}
-	return (1);
+	if (!is_alphanumeric(s[left]))
+	{
+		return (is_palindrome_recursive(s, left + 1, right));
+	}
+	if (!is_alphanumeric(s[right]))
+	{
+		return (is_palindrome_recursive(s, left, right - 1));
+	}
+	if (is_equal(s[left], s[right]))
+	{
+		return (is_palindrome_recursive(s, left + 1, right - 1));
+	}
+	return (0);
 }
 
 /**
