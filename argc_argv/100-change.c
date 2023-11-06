@@ -4,8 +4,6 @@
 /**
  * minCoins - calculates the minimum number of coins needed
  * @cents: amount of cents you need to give back
- * @argc: argument count
- * @argv: argument vector
  *
  * Return: number of coins needed
  */
