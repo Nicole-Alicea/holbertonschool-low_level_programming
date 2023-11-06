@@ -8,14 +8,6 @@
  * Return: number of coins needed
  */
 
-/**
- * main - entry point
- * @argc: argument count
- * @argv: argument vector
- *
- * Return: 0 (Success) or 1 for Error
- */
-
 int minCoins(int cents)
 {
 	int coins[] = {25, 10, 5, 2, 1};
@@ -29,6 +21,14 @@ int minCoins(int cents)
 	}
 	return (numCoins);
 }
+
+/**
+ * main - entry point
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: 0 (Success) or 1 for Error
+ */
 
 int main(int argc, char *argv[])
 {
