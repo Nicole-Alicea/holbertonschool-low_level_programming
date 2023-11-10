@@ -6,7 +6,7 @@
  * Return: Always 0 (Success)
  */
 
-#define NAME 2-main.c
+#define NAME 2-main
 
 int main(void)
 {
