@@ -6,11 +6,9 @@
  * Return: Always 0 (Success)
  */
 
-#define __FILENAME__
-
 int main(void)
 {
-	printf("%s\n", __FILENAME__);
+	printf("%s\n", __FILE__);
 
 	return (0);
 }
