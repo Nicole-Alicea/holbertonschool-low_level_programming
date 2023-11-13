@@ -2,7 +2,7 @@
 #define DOG_H
 
 /**
- * This struct represents a dog's info
+ * struct - represents a dog's info
  */
 
 struct dog
