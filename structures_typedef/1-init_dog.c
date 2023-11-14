@@ -13,5 +13,10 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	d = {name, age, owner}
+	if (d != NULL)
+	{
+		printf(d->name, "%s", name);
+		d->age = age;
+		printf(d->owner, "%s", owner);
+	}
 }
