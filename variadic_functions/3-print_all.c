@@ -14,14 +14,16 @@ void print_all(const char * const format, ...)
 	va_list arg;
 	va_start(arg, format);
 
-	const char *ptr = format;
+	const char *ptr;
 
-	while (*ptr != '\0')
+	while (*format != '\0')
 	{
 		char c;
 		int i;
 		float f;
 		char *s;
+
+		ptr = format;
 		
 		if (*ptr == 'c')
 		{
@@ -50,7 +52,7 @@ void print_all(const char * const format, ...)
 				printf("%s", s);
 			}
 		}
-		ptr++;
+		format++;
 	}
 	printf("\n");
 
