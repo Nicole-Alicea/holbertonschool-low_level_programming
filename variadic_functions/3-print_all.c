@@ -14,13 +14,13 @@ void print_all(const char * const format, ...)
 	va_list arg;
 	va_start(arg, format);
 
-	char c;
-	int i;
-	float f;
-	char *s;
-
-	while (*format)
+	while (*format != '\0')
 	{
+		char c;
+		int i;
+		float f;
+		char *s;
+		
 		if (*format == 'c')
 		{
 			c = (char)va_arg(arg, int);
