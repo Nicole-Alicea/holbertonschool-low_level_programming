@@ -1,4 +1,6 @@
-#include "function_pointers.h"
+#include "3-calc.h"
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * get_op_func - function will return pointer to the function
@@ -18,10 +20,15 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
 
-	if (s != "+" && s != "-" && s != "*" && s != "/" && s != "%")
+	while (i < 5)
 	{
-		return (NULL);
+		if (strcmp(s, ops[i].op) == 0)
+			return (ops[i].f);
+
+		i++;
 	}
+
+	return (0);
 }

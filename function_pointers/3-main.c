@@ -12,61 +12,25 @@
 
 int main(int argc, char *argv[])
 {
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[3]);
-	char operator = argv[2][0];
+	int (*oprt)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 
-		return (98);
+		exit(98);
 	}
 
-	if (operator == '+')
-	{
-		printf("%d\n", num1 + num2);
-	}
-	else if (operator == '-')
-	{
-		printf("%d\n", num1 - num2);
-	}
-	else if (operator == '*')
-	{
-		printf("%d\n", num1 * num2);
-	}
-	else if (operator == '/')
-	{
-		if (num2 != 0)
-		{
-			printf("%d\n", num1 / num2);
-		}
-		else
-		{
-			printf("Error\n");
+	oprt = get_op_func(argv[2]);
 
-			return (100);
-		}
-	}
-	else if (operator == '%')
-	{
-		if (num2 != 0)
-		{
-			printf("%d\n", num1 % num2);
-		}
-		else
-		{
-			printf("Error\n");
-
-			return (100);
-		}
-	}
-	else
+	if (!oprt)
 	{
 		printf("Error\n");
 
-		return (99);
+		exit(99);
 	}
+
+	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
 
 	return (0);
 }
