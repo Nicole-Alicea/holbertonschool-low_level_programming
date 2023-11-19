@@ -67,59 +67,31 @@ void print_string(va_list ap)
 
 void print_all(const char * const format, ...)
 {
+	const char *f;
 	va_list ap;
+	funckey key [4] = { {printf_char, 'c'}, {printf_int, 'i'},
+		{printf_float, 'f'}, {printf_string, 's'} };
+	int keyind = 0, notfirst = 0;
+
+	f = format;
 	va_start(ap, format);
 
-	char c;
-	int i;
-	float f;
-	char *s;
-	int print;
-
-	print = 0;
-
-	while ((c = *format++))
+	while (format != NULL && *f)
 	{
-		if (c == 'c')
+		if (key[keyind].spec == *f)
 		{
-			i = va_arg(ap, int);
-			printf("%c", i)
-				print = 1;
+			if (notfirst)
+				printf(", ");
+			notfirst = 1;
+			key[keyind].f(ap);
+			f++;
+			keyind = -1;
 		}
-		else if (c == 'i')
-		{
-			i = va_arg(ap, int);
-			printf("%d", i);
-			print = 1;
-		}
-		else if (c == 'f')
-		{
-			f = va_arg(ap, double);
-			printf ("%f", f);
-			print = 1;
-		}
-		else if (c == 's')
-		{
-			s = va_arg(ap, char *);
-
-			if (s == NULL)
-			{
-				printf("(nil)");
-			}
-			else
-			{
-				printf("%s", s);
-			}
-			print = 1;
-		}
-		if (print && *format)
-		{
-			printf(", ");
-
-			print = 0;
-		}
+		keyind++;
+		f += keyind / 4;
+		keyind %= 4;
 	}
+	printf("\n");
 
 	va_end(ap);
-	printf("\n");
 }
