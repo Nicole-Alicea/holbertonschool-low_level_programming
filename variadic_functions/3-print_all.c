@@ -25,7 +25,7 @@ void print_all(const char * const format, ...)
 					(format[i] == 'i') ? (printf("%d", va_arg(args, int)), 1) :
 					(format[i] == 'f') ? (printf("%f", va_arg(args, double)), 1) :
 					((format[i] == 's') ? ((str = va_arg(args, char *))
-					? (printf("%s", str), 1) :
+					!= NULL ? (printf("%s", str), 1) :
 					(printf("(nil)"), 1)) : 0)) && format[i + 1] != '\0'))
 				{
 					printf(", ");
