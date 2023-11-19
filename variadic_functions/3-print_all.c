@@ -11,7 +11,7 @@
 
 void print_char(va_list ap)
 {
-	printf("%c", va_arg(ap, int));
+	printf("%c", (char) va_arg(ap, int));
 }
 
 /**
@@ -35,7 +35,7 @@ void print_integer(va_list ap)
 
 void print_float(va_list ap)
 {
-	printf("%f", va_arg(ap, double));
+	printf("%f", (float) va_arg(ap, double));
 }
 
 /**
@@ -49,7 +49,7 @@ void print_string(va_list ap)
 {
 	char *s = va_arg(ap, char *);
 
-	if (!s)
+	while (s == NULL)
 	{
 		printf("(nil)");
 
@@ -67,38 +67,59 @@ void print_string(va_list ap)
 
 void print_all(const char * const format, ...)
 {
-	print_type types[] = {
-		{"c", print_char},
-		{"i", print_integer},
-		{"f", print_float},
-		{"s", print_string},
-		{NULL, NULL}
-	};
-
 	va_list ap;
-	char *separator = '';
-	int i = 0;
-	int j = 0;
-
 	va_start(ap, format);
 
-	while (format && format[i])
-	{
-		while (types[j].type)
-		{
-			if (*types[j].type == format[i])
-			{
-				printf("%s", separator);
-				types[j].f(ap);
-				separator = ", ";
-			}
-			j++;
-		}
-		j = 0;
+	char c;
+	int i;
+	float f;
+	char *s;
+	int print;
 
-		i++;
+	print = 0;
+
+	while ((c = *format++))
+	{
+		if (c == 'c')
+		{
+			i = va_arg(ap, int);
+			printf("%c", i)
+				print = 1;
+		}
+		else if (c == 'i')
+		{
+			i = va_arg(ap, int);
+			printf("%d", i);
+			print = 1;
+		}
+		else if (c == 'f')
+		{
+			f = va_arg(ap, double);
+			printf ("%f", f);
+			print = 1;
+		}
+		else if (c == 's')
+		{
+			s = va_arg(ap, char *);
+
+			if (s == NULL)
+			{
+				printf("(nil)");
+			}
+			else
+			{
+				printf("%s", s);
+			}
+			print = 1;
+		}
+		if (print && *format)
+		{
+			printf(", ");
+
+			print = 0;
+		}
 	}
-	printf("\n");
 
 	va_end(ap);
+	printf("\n");
 }
