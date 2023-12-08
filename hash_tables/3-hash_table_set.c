@@ -1,5 +1,8 @@
 #include "hash_tables.h"
 
+unsigned int hash_function(const char *key);
+hash_node_t *create_node(const char *key, const char *value);
+
 /**
  * hash_table_set - This function adds an element to the hash table
  * @ht: The hash table you want to add or update the key/value to
