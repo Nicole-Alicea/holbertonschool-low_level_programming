@@ -35,5 +35,5 @@ void hash_table_print(const hash_table_t *ht)
 			need_coma = 1;
 		}
 	}
-	printf("\n}\n");
+	printf("}\n");
 }
