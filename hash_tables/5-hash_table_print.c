@@ -22,7 +22,7 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		node = ht->array[n];
 
-		if (node != NULL)
+		while (node != NULL)
 		{
 			printf("'%s': '%s'", node->key, node->value);
 
@@ -32,6 +32,10 @@ void hash_table_print(const hash_table_t *ht)
 			{
 				printf(", ");
 			}
+		}
+		if (n < ht->size - 1)
+		{
+			printf("\n");
 		}
 	}
 	printf("\n}\n");
