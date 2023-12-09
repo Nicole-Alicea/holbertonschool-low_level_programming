@@ -11,13 +11,13 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int n;
 	hash_node_t *temp;
-	int flag = 0;
+	int need_coma = 0;
 
 	if (ht == NULL)
 	{
 		return;
 	}
-	printf("{");
+	printf("{\n");
 
 	for (n = 0; n < ht->size; n++)
 	{
@@ -25,13 +25,15 @@ void hash_table_print(const hash_table_t *ht)
 
 		while (temp != NULL)
 		{
-			if (flag == 1)
-			
+			if (need_coma)
+			{
 				printf(", ");
-				printf("'%s': '%s'", temp->key, temp->value);
-				flag = 1;
-				temp = temp->next;
+			}
+			printf("'%s': '%s'", temp->key, temp->value);
+			temp = temp->next;
+
+			need_coma = 1;
 		}
 	}
-	printf("}\n");
+	printf("\n}\n");
 }
