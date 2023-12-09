@@ -27,16 +27,18 @@ void hash_table_print(const hash_table_t *ht)
 			printf("'%s': ", node->key);
 
 			while (node != NULL)
-				printf("'%s'", node-value);
-			
-			node = node->next;
-
-			if (node != NULL)
 			{
-				printf(", ");
+				printf("'%s'", node-value);
+				
+				node = node->next;
+				
+				if (node != NULL)
+				{
+					printf(", ");
+				}
 			}
+			printf("\n");
 		}
-		printf("\n");
 	}
 	printf("}\n");
 }
